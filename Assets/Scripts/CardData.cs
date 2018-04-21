@@ -36,9 +36,14 @@ public class CardData : ScriptableObject
         PlayerStats.Instance.HP += ammount;
     }
 
-    public void SetAttackType(WeaponType type)
+    public void SetWeaponToBeamCannon()
     {
-        PlayerCombatController.Instance.CurrentWeapon = type;
+        PlayerCombatController.Instance.CurrentWeapon = WeaponType.Beam;
+    }
+
+    public void SetWeaponToBolt()
+    {
+        PlayerCombatController.Instance.CurrentWeapon = WeaponType.Bolt;
     }
 
     public void SetAttackDamage(float ammount)
@@ -55,5 +60,6 @@ public class CardData : ScriptableObject
     {
         CardSystemController.Instance.CurrentTarget.Discard();
     }
+
 }
 
