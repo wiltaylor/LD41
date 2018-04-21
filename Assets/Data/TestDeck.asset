@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2fd16c19d07024aa92c3fd35321f46, type: 3}
+  m_Name: TestDeck
+  m_EditorClassIdentifier: 
+  Items:
+  - Card: {fileID: 11400000, guid: d2ca361518301d7439254432e2f8117e, type: 2}
+    Chance: 1
+  - Card: {fileID: 11400000, guid: 8bc8b3c7b6e19464cbaa6dc89e73b584, type: 2}
+    Chance: 1
+  - Card: {fileID: 11400000, guid: b4f9a50d73d6f99419403b1a1b5f1fa0, type: 2}
+    Chance: 5
+  - Card: {fileID: 11400000, guid: 955d560aca59fe342a532e0795c6afad, type: 2}
+    Chance: 5

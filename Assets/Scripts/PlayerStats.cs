@@ -3,6 +3,14 @@ using UnityEngine.Events;
 
 public class PlayerStats : MonoBehaviour
 {
+    private static PlayerStats _instance;
+
+    public static PlayerStats Instance
+    {
+        get { return _instance; }
+    }
+
+
     public float Mana;
     public float MaxMana;
     public float ManaChargeRate;
@@ -11,9 +19,16 @@ public class PlayerStats : MonoBehaviour
     public float MaxHP;
     public float HPChargeRate;
 
-    public UnityEvent OnDeath;
+    void Awake()
+    {
+        if (_instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    private bool hasProcessedDeath = false;
+        _instance = this;
+    }
 
     public void UpdateHP(float ammount)
     {
@@ -27,17 +42,6 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        if (hasProcessedDeath)
-            return;
-
-        if (HP <= 0f)
-        {
-            OnDeath.Invoke();
-            hasProcessedDeath = true;
-            HP = 0;
-            return;
-        }
-
         Mana += ManaChargeRate * Time.deltaTime;
         HP += HPChargeRate * Time.deltaTime;
 
