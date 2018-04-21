@@ -8,5 +8,6 @@ public class CancelCardSelection : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         HandController.Instance.UnselectAll();
+        CardSystemController.Instance.ClearSelection();
     }
 }

@@ -52,6 +52,16 @@ public class CardSystemController : MonoBehaviour
     public void ClickedOnCard(CardController card)
     {
 
+        if (_currentState == SelectionState.CardSelected && card == CurrentSelection)
+        {
+            card.SetSelect(false);
+            CurrentSelection = null;
+            _currentState = SelectionState.Ready;
+            return;
+
+        }
+
+
         if (_currentState == SelectionState.CardSelected && card.CardLocation == _currentTargetTypeType)
         {
             CurrentTarget = card;
@@ -95,6 +105,13 @@ public class CardSystemController : MonoBehaviour
             }
 
         }
+    }
+
+    public void ClearSelection()
+    {
+        CurrentSelection = null;
+        CurrentTarget = null;
+        _currentState = SelectionState.Ready;
     }
 
     public bool CanCast(CardData data)
