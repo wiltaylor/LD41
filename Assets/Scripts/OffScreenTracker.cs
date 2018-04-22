@@ -130,8 +130,8 @@ public class OffScreenTracker : MonoBehaviour
                 var screenBounds = new Vector3(screenCenter.x * paddingX, screenCenter.y * paddingY, screenCenter.z); 
 
                 screenPoint = cos > 0
-                    ? new Vector3(screenBounds.y / m, screenBounds.y, 0)
-                    : new Vector3(-screenBounds.y / m, -screenBounds.y, 0);
+                    ? new Vector3(-screenBounds.y / m, screenBounds.y, 0)
+                    : new Vector3(screenBounds.y / m, -screenBounds.y, 0);
 
                 if(screenPoint.x > screenBounds.x)
                     screenPoint = new Vector3(screenBounds.x, screenBounds.x * m, 0);

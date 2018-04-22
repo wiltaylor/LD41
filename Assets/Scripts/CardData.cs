@@ -23,8 +23,10 @@ public class CardData : ScriptableObject
     public UnityEvent OnActivation;
     public UnityEvent OnExpire;
     public GameObject MonsterPrefab;
+    public float MessageDelay;
+    public Color MessageColour;
 
-    
+
     public void AddManaResource(int ammount)
     {
         PlayerStats.Instance.MaxMana += ammount;
@@ -69,12 +71,17 @@ public class CardData : ScriptableObject
 
     public void DamageBoss(float ammount)
     {
-        BossStats.Instance.HP -= ammount;
+        BossController.Instance.TakeDamage(ammount);
     }
 
     public void DamagePlayer(float ammount)
     {
         PlayerStats.Instance.HP -= ammount;
+    }
+
+    public void SendTextMessage(string messaage)
+    {
+        TextMessageSystem.Instance.AddMessage(messaage, MessageDelay, MessageColour);
     }
 
 

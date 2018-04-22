@@ -17,6 +17,7 @@ public class BossData : ScriptableObject
     public DeckData Deck;
     public DialogueEntry[] IntroText;
     public DialogueEntry[] DeathText;
+    public DialogueEntry[] OnHitText;
 
 }
 

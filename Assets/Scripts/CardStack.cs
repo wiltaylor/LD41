@@ -57,6 +57,8 @@ public class CardStack : MonoBehaviour
         controller.UpdateCard();
         controller.CardLocation = Type == StackType.Boss ? CardTargetType.BossCard : CardTargetType.Buff;
 
+        controller.Data.OnActivation.Invoke();
+
         if (data.Timer > 0)
         {
             controller.CountDownLeft = data.Timer;
@@ -70,6 +72,8 @@ public class CardStack : MonoBehaviour
 
     void Update()
     {
+
+        _cardControllers.RemoveAll(c => c == null);
 
         if (PlayerStats.Instance.HP <= 0)
             return;

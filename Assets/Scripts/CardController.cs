@@ -90,10 +90,10 @@ public class CardController : MonoBehaviour, IPointerClickHandler, IPointerEnter
     {
         CardSystemController.Instance.PreviewCard(Data);
     }
-
+    
     public void Discard()
     {
-        Destroy(gameObject);
+            Destroy(gameObject);
     }
 
     public void OnPointerUp(PointerEventData eventData)

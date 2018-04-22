@@ -11,19 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fe8d18889f2e643bae18f7a4153177, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  Name: Bob
-  Picture: {fileID: 21300000, guid: e19e30eb895d63e48a7c4fac388b0c33, type: 3}
-  MaxHP: 10
-  MaxMana: 5
-  ManaChargeRate: 1
+  Name: 
+  Picture: {fileID: 0}
+  MaxHP: 0
+  MaxMana: 0
+  ManaChargeRate: 0
   HPChargeRate: 0
-  CoolDown: 15
-  Deck: {fileID: 11400000, guid: ee4f239a36bab1e4db816a0d08572bf1, type: 2}
-  IntroText:
-  - Text: Greetings Here!
-    Time: 1
-  - Text: Hope you are ready for an arse kicking!
-    Time: 3
-  DeathText:
-  - Text: Arggg
-    Time: 3
+  CoolDown: 0
+  Deck: {fileID: 0}
+  IntroText: []
+  DeathText: []
+  OnHitText: []

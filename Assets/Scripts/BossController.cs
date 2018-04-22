@@ -21,6 +21,7 @@ public class BossController : MonoBehaviour
     public BossData CurrentBoss;
     public Text NameText;
     public Image BossImage;
+    public Color DialogueColour;
 
     private CardData currentCard;
     private float _timeout;
@@ -63,6 +64,11 @@ public class BossController : MonoBehaviour
 
 	    if (_bossStats.HP <= 0) //Do death stuff here
 	    {
+	        TextMessageSystem.Instance.Clear();
+
+            foreach (var item in CurrentBoss.DeathText)
+                TextMessageSystem.Instance.AddMessage(item.Text, item.Time, DialogueColour);
+
 	        CurrentBoss = null;
 	        return;
 	    }
@@ -139,5 +145,15 @@ public class BossController : MonoBehaviour
         NameText.text = boss.Name;
         BossImage.sprite = boss.Picture;
         Deck = boss.Deck;
+        DrawTimeOut = boss.CoolDown;
+    }
+
+    public void TakeDamage(float ammount)
+    {
+        _bossStats.HP -= ammount;
+        TextMessageSystem.Instance.Clear();
+
+        foreach (var item in CurrentBoss.OnHitText)
+            TextMessageSystem.Instance.AddMessage(item.Text, item.Time, DialogueColour);
     }
 }

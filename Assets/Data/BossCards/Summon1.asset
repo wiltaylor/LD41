@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc87e626ffdd024ebae475f3112d2f3, type: 3}
+  m_Name: Summon1
+  m_EditorClassIdentifier: 
+  Name: Summon 1
+  Type: Summon
+  Description: Summons 1 Minion to fight for the Enemy Wizard.
+  Picture: {fileID: 21300000, guid: 37238fceb55901541bf6a0c58216a04b, type: 3}
+  Cost: 1
+  Timer: 5
+  CastAction: 1
+  TargetType: 0
+  OnCast:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnActivation:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnExpire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_MethodName: SpawnMonsters
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MonsterPrefab: {fileID: 1484113939570672, guid: df6aaa2f1da6df247b0d741490467a11,
+    type: 2}
+  MessageDelay: 0
+  MessageColour: {r: 0, g: 0, b: 0, a: 0}

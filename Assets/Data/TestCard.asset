@@ -16,7 +16,9 @@ MonoBehaviour:
   Description: Grants the caster more mana
   Picture: {fileID: 21300000, guid: 84bfd9b63d5fa2b4992d1b0e1fc0aa4e, type: 3}
   Cost: 1
-  HasActivation: 0
+  Timer: 0
+  CastAction: 0
+  TargetType: 0
   OnCast:
     m_PersistentCalls:
       m_Calls:
@@ -38,3 +40,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnExpire:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MonsterPrefab: {fileID: 0}
+  MessageDelay: 0
+  MessageColour: {r: 0, g: 0, b: 0, a: 0}

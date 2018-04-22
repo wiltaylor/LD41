@@ -21,7 +21,10 @@ public class ResourceTracker : MonoBehaviour
     
 
     void Update ()
-	{
+    {
+        _containers.RemoveAll(c => c == null);
+
+
 	    var qty = Type == ResourceType.PlayerHP ? Mathf.FloorToInt(PlayerStats.Instance.HP) :
 	        Type == ResourceType.PlayerMana ? Mathf.FloorToInt(PlayerStats.Instance.Mana) :
 	        Type == ResourceType.BossHP ? Mathf.FloorToInt(BossStats.Instance.HP) : Mathf.FloorToInt(BossStats.Instance.Mana);

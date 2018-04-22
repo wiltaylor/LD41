@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cc87e626ffdd024ebae475f3112d2f3, type: 3}
-  m_Name: DelaySpawnMonsters 1
+  m_Name: Counter Spell
   m_EditorClassIdentifier: 
-  Name: Delay Spawn Monsters
-  Type: Spawn
-  Description: Spawns Monsters to attack player
-  Picture: {fileID: 21300000, guid: e19e30eb895d63e48a7c4fac388b0c33, type: 3}
-  Cost: 5
-  Timer: 20
-  CastAction: 1
-  TargetType: 0
+  Name: Counter Spell
+  Type: Spell
+  Description: Use to remove an opponents spell from play.
+  Picture: {fileID: 21300000, guid: e34ef2230adaa534eb6732f6517bfd44, type: 3}
+  Cost: 3
+  Timer: 0
+  CastAction: 2
+  TargetType: 1
   OnCast:
     m_PersistentCalls:
       m_Calls: []
@@ -26,24 +26,25 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   OnActivation:
     m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnExpire:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000}
-        m_MethodName: SpawnMonsters
-        m_Mode: 3
+        m_MethodName: DestroyTarget
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MonsterPrefab: {fileID: 1484113939570672, guid: df6aaa2f1da6df247b0d741490467a11,
-    type: 2}
+  OnExpire:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MonsterPrefab: {fileID: 0}
+  MessageDelay: 0
+  MessageColour: {r: 0, g: 0, b: 0, a: 0}

@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 public class BossRosterController : MonoBehaviour
 {
     public BossRoster Roster;
+    public Color DialogueColour;
 
     private int _bossIndex = -1;
 	void Update ()
 	{
 	    if (BossController.Instance.CurrentBoss != null)
+	        return;
+
+	    if (!TextMessageSystem.Instance.isEmpty)
 	        return;
 
 	    var nextBoss = GetNextBoss();
@@ -22,6 +26,11 @@ public class BossRosterController : MonoBehaviour
 	    }
 
         BossController.Instance.SetNewBoss(nextBoss);
+
+        TextMessageSystem.Instance.Clear();
+
+        foreach(var item in nextBoss.IntroText)
+            TextMessageSystem.Instance.AddMessage(item.Text, item.Time, DialogueColour);
 	}
 
     BossData GetNextBoss()

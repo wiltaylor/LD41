@@ -51,9 +51,6 @@ public class CardSystemController : MonoBehaviour
 
     public void ClickedOnCard(CardController card)
     {
-        Debug.Log("Card clicked!!!!");
-
-
         if (PlayerStats.Instance.HP <= 0)
             return;
 
