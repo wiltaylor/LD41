@@ -45,6 +45,7 @@ public class BattleFieldJunkSpawner : MonoBehaviour
                 var junk = Instantiate(item.Prefab);
                 junk.transform.position = new Vector3(x, Y, z);
                 junk.SetActive(true);
+                junk.transform.SetParent(transform);
             }
         }
     }
