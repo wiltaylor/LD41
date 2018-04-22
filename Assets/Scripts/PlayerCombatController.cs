@@ -43,7 +43,7 @@ public class PlayerCombatController : MonoBehaviour
 
         _instance = this;
     }
-	
+
 	void Update ()
 	{
 
