@@ -47,6 +47,9 @@ public class BossController : MonoBehaviour
 	
 	void Update ()
 	{
+	    if (PlayerStats.Instance.HP <= 0)
+	        return;
+
 	    if (CurrentBoss == null)
 	    {
             NameText.gameObject.SetActive(false);

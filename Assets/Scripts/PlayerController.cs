@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float Speed;
     public float RotationSpeed;
+    public GameObject MeatFountain;
         
     private Rigidbody _rigidbody;
+    private MeshRenderer _render;
     private PlayerCombatController _combatController;
 
 
@@ -15,10 +15,23 @@ public class PlayerController : MonoBehaviour
 	{
 	    _rigidbody = GetComponent<Rigidbody>();
 	    _combatController = GetComponent<PlayerCombatController>();
+	    _render = GetComponent<MeshRenderer>();
 	}
 	
 	void Update ()
 	{
+	    if (PlayerStats.Instance.HP <= 0)
+	    {
+	        _render.enabled = false;
+            MeatFountain.SetActive(true);
+
+	        _rigidbody.velocity = Vector3.zero;
+	        _rigidbody.angularVelocity = Vector3.zero;
+
+
+            return;
+	    }
+
 
 	    var moveVector = Vector3.zero;
 	    var angleVector = Vector3.zero;

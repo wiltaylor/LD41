@@ -19,6 +19,8 @@ public class PlayerStats : MonoBehaviour
     public float MaxHP;
     public float HPChargeRate;
 
+    public int KillCount;
+
     void Awake()
     {
         if (_instance != null)
@@ -42,6 +44,9 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        if (HP <= 0)
+            return;
+
         Mana += ManaChargeRate * Time.deltaTime;
         HP += HPChargeRate * Time.deltaTime;
 

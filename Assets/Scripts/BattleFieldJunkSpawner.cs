@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using Random = UnityEngine.Random;
 
 public class BattleFieldJunkSpawner : MonoBehaviour
@@ -42,8 +43,13 @@ public class BattleFieldJunkSpawner : MonoBehaviour
                         throw new ApplicationException("Infinite loop protection triggered");
                 }
 
+                var angle = Random.Range(0, 360f);
+
+
+
                 var junk = Instantiate(item.Prefab);
                 junk.transform.position = new Vector3(x, Y, z);
+                junk.transform.Rotate(Vector3.up, angle);
                 junk.SetActive(true);
                 junk.transform.SetParent(transform);
             }

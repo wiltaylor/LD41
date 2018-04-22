@@ -70,6 +70,18 @@ public class CardStack : MonoBehaviour
 
     void Update()
     {
+
+        if (PlayerStats.Instance.HP <= 0)
+            return;
+
+        if (Type == StackType.Boss && BossStats.Instance.HP <= 0)
+        {
+            foreach(var card in _cardControllers)
+                card.Discard();
+
+            return;
+        }
+
         _cardControllers.RemoveAll(c => c == null);
 
         foreach (var card in _cardControllers.Where(c => c.HasCountDown))

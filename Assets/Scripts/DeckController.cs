@@ -42,6 +42,10 @@ public class DeckController : MonoBehaviour
     
 	void Update ()
 	{
+	    if (PlayerStats.Instance.HP <= 0)
+	        return;
+
+
 	    CountDownText.text = Mathf.RoundToInt(_currentCoolDown).ToString();
 
 

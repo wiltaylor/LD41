@@ -33,6 +33,7 @@ public class CardController : MonoBehaviour, IPointerClickHandler, IPointerEnter
     public bool HasCountDown;
     public float CountDownLeft;
     public CardTargetType CardLocation;
+    public GameObject DisabledShield;
 
     private Image _image;
 
@@ -71,7 +72,18 @@ public class CardController : MonoBehaviour, IPointerClickHandler, IPointerEnter
         if (CountDown != null && HasCountDown)
             CountDown.text = Mathf.RoundToInt(CountDownLeft).ToString();
 
+        if (PlayerStats.Instance.Mana < Data.Cost && DisabledShield != null)
+        {
+            DisabledShield.SetActive(true);
+        }else if (DisabledShield != null)
+        {
+            DisabledShield.SetActive(false);
+        }
+    }
 
+    void Update()
+    {
+        UpdateCard();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

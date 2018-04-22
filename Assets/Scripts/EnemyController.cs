@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     public float BoltLiveTime;
     public float BoltDamage;
     public float BoltSpeed;
+    public GameObject MeatFountainPrefab;
 
     public EnemyState State;
 
@@ -33,9 +34,17 @@ public class EnemyController : MonoBehaviour
     {
         if (BossStats.Instance.HP <= 0)
         {
+            var meat = PoolSystem.Instance.GetProjectile(MeatFountainPrefab);
+
+            meat.transform.position = transform.position;
+            meat.SetActive(true);
+
             gameObject.SetActive(false);
             return;
         }
+
+        if (PlayerStats.Instance.HP <= 0)
+            return;
 
         transform.LookAt(PlayerStats.Instance.transform);
 

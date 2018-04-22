@@ -151,6 +151,8 @@ MonoBehaviour:
   BoltLiveTime: 5
   BoltDamage: 1
   BoltSpeed: 10
+  MeatFountainPrefab: {fileID: 1513411840537486, guid: e6f4c9c3c519491468bece0391bcaac4,
+    type: 2}
   State: 0
 --- !u!114 &114583750830517360
 MonoBehaviour:
@@ -192,6 +194,12 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnDeathPrefab: {fileID: 1513411840537486, guid: e6f4c9c3c519491468bece0391bcaac4,
+    type: 2}
+  CardPickUpPrefab: {fileID: 1985847137007490, guid: 67c64d9200dc7c441b558c6d61a4044f,
+    type: 2}
+  IncrementKillCount: 1
+  LootTable: {fileID: 11400000, guid: b25f72ef4ec76084798a84d34a1d0d34, type: 2}
 --- !u!136 &136273357989714394
 CapsuleCollider:
   m_ObjectHideFlags: 1
