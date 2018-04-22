@@ -20,8 +20,6 @@ MonoBehaviour:
     Chance: 100
   - Card: {fileID: 11400000, guid: a23d1185082da0e448bde949a65f7d83, type: 2}
     Chance: 30
-  - Card: {fileID: 11400000, guid: 24cdd4098eca34e44a34ee347f567809, type: 2}
-    Chance: 50
   - Card: {fileID: 11400000, guid: 744c6a92df2667c42bfd1a0fab4fe2a8, type: 2}
     Chance: 100
   - Card: {fileID: 11400000, guid: 7fe869c497425ad4dbef5dde31a3baf6, type: 2}

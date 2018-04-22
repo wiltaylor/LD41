@@ -98,8 +98,14 @@ public class CardController : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(eventData.button == PointerEventData.InputButton.Right && CardLocation == CardTargetType.Hand)
+        if (eventData.button == PointerEventData.InputButton.Right && CardLocation == CardTargetType.Hand)
+        {
+            CardSystemController.Instance.ClearSelection();
+            CardSystemController.Instance.PlayDiscard();
             Discard();
+        }
+
+        
     }
 }
 

@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: Use to remove an opponents spell from play.
   Picture: {fileID: 21300000, guid: e34ef2230adaa534eb6732f6517bfd44, type: 3}
   Cost: 3
-  Timer: 0
+  Timer: 5
   CastAction: 2
   TargetType: 1
   OnCast:

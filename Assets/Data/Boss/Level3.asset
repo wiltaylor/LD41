@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18fe8d18889f2e643bae18f7a4153177, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  Name: Arbust - Level 3
+  Picture: {fileID: 21300000, guid: b9868be7b13f3b54abbaba1eb6f7d429, type: 3}
+  MaxHP: 8
+  MaxMana: 20
+  ManaChargeRate: 1
+  HPChargeRate: 0
+  CoolDown: 8
+  Deck: {fileID: 11400000, guid: f0756f5ef3b9cd34d86c1002f6683e93, type: 2}
+  IntroText:
+  - Text: What?! You beat my henchmen!
+    Time: 3
+  - Text: It is hard finding good help these days!
+    Time: 3
+  - Text: I guess I will have to deal with you myself!
+    Time: 3
+  DeathText:
+  - Text: Noooooooo........
+    Time: 3
+  OnHitText:
+  - Text: Damn insect bites!
+    Time: 3

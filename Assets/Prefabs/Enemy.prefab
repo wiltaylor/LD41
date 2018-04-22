@@ -199,7 +199,7 @@ MonoBehaviour:
   CardPickUpPrefab: {fileID: 1985847137007490, guid: 67c64d9200dc7c441b558c6d61a4044f,
     type: 2}
   IncrementKillCount: 1
-  LootTable: {fileID: 11400000, guid: b25f72ef4ec76084798a84d34a1d0d34, type: 2}
+  LootTable: {fileID: 11400000, guid: f64cb2d498f4b1c4798fd094c6c866e6, type: 2}
 --- !u!136 &136273357989714394
 CapsuleCollider:
   m_ObjectHideFlags: 1

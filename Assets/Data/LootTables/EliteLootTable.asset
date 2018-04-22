@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08c2e793d02f7f144845169c9aaed0bf, type: 3}
-  m_Name: EnemyLootTable
+  m_Name: EliteLootTable
   m_EditorClassIdentifier: 
   Items:
   - Card: {fileID: 0}
-    Chance: 100
+    Chance: 20
   - Card: {fileID: 11400000, guid: 0ea0f912a1cbbbe4d85ed1196e0d2900, type: 2}
-    Chance: 10
+    Chance: 60
   - Card: {fileID: 11400000, guid: d590b21ebbf26b8448fbb510fc2b6b0c, type: 2}
     Chance: 80
   - Card: {fileID: 11400000, guid: 5cfc803942c3ba44e8d10e4895ac1e1c, type: 2}
@@ -25,4 +25,4 @@ MonoBehaviour:
   - Card: {fileID: 11400000, guid: d812c8308ff71f6449ecb17cb519ce61, type: 2}
     Chance: 50
   - Card: {fileID: 11400000, guid: 1b0cc8eeffc0d6d45a539b8f69c931db, type: 2}
-    Chance: 30
+    Chance: 80

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18fe8d18889f2e643bae18f7a4153177, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  Name: Andarius - Level 2
+  Picture: {fileID: 21300000, guid: eeb2b05e6a72ad3448d2aa9b37f41106, type: 3}
+  MaxHP: 5
+  MaxMana: 7
+  ManaChargeRate: 1
+  HPChargeRate: 0
+  CoolDown: 10
+  Deck: {fileID: 11400000, guid: 0bee41b35342fff40babee52961ee47a, type: 2}
+  IntroText:
+  - Text: So you managed to defeat Vardian!
+    Time: 3
+  - Text: You will find my magic a lot more challanging!
+    Time: 3
+  - Text: Lets see how you like this!
+    Time: 3
+  DeathText:
+  - Text: You may have beat me but...
+    Time: 3
+  - Text: you don't stand a chance against Arbust!
+    Time: 3
+  OnHitText:
+  - Text: You will pay for that!
+    Time: 3

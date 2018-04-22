@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.859}
+  m_Color: {r: 0.25935337, g: 0.25964382, b: 0.30147058, a: 0.859}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Owner: 0
   Selected: {r: 1, g: 1, b: 0, a: 1}
-  Deselected: {r: 1, g: 1, b: 1, a: 1}
+  Deselected: {r: 0.38235295, g: 0.3458045, b: 0.3458045, a: 1}
   Data: {fileID: 11400000, guid: d2ca361518301d7439254432e2f8117e, type: 2}
   CardImage: {fileID: 114963943397257020}
   Name: {fileID: 114201420455588986}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38235295, g: 0.3458045, b: 0.3458045, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

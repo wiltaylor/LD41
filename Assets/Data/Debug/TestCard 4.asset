@@ -46,3 +46,5 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   MonsterPrefab: {fileID: 0}
+  MessageDelay: 0
+  MessageColour: {r: 0, g: 0, b: 0, a: 0}

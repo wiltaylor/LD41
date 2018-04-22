@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Roster
   m_EditorClassIdentifier: 
   Bosses:
-  - {fileID: 11400000, guid: c12dfe07b6a187649bde356f2836da30, type: 2}
-  - {fileID: 11400000, guid: c12dfe07b6a187649bde356f2836da30, type: 2}
+  - {fileID: 11400000, guid: 08245c7ed6ef50e47985675d034caa9e, type: 2}
+  - {fileID: 11400000, guid: d4a049c42f1e4c34b9784bca144e803b, type: 2}
+  - {fileID: 11400000, guid: a16470d113505014698adf6dba2dc885, type: 2}

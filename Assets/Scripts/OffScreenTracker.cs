@@ -143,7 +143,7 @@ public class OffScreenTracker : MonoBehaviour
                 var rect = tracker.GetComponent<RectTransform>();
                 rect.transform.position = screenPoint;
                 rect.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
-
+                
             }
         }
     }

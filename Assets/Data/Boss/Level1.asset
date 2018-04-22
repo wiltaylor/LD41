@@ -11,14 +11,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fe8d18889f2e643bae18f7a4153177, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  Name: 
-  Picture: {fileID: 0}
-  MaxHP: 0
-  MaxMana: 0
-  ManaChargeRate: 0
+  Name: Vardian - Level 1
+  Picture: {fileID: 21300000, guid: 2813c173352135d45b6adf6135d82934, type: 3}
+  MaxHP: 3
+  MaxMana: 5
+  ManaChargeRate: 1
   HPChargeRate: 0
-  CoolDown: 0
-  Deck: {fileID: 0}
-  IntroText: []
-  DeathText: []
-  OnHitText: []
+  CoolDown: 15
+  Deck: {fileID: 11400000, guid: 89878655479663f46ad4f41a10004c15, type: 2}
+  IntroText:
+  - Text: Who dares enter my realm.
+    Time: 3
+  - Text: Prepair to die!
+    Time: 2
+  DeathText:
+  - Text: How could this be arhhh.
+    Time: 3
+  OnHitText:
+  - Text: Ow quit it!
+    Time: 3

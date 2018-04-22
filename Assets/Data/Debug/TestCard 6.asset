@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cc87e626ffdd024ebae475f3112d2f3, type: 3}
-  m_Name: TestCard 5
+  m_Name: TestCard 6
   m_EditorClassIdentifier: 
-  Name: BeamCannon
+  Name: Bolts
   Type: Weapon
-  Description: Gives you a beam cannon
-  Picture: {fileID: 21300000, guid: ed378eb5f33bbd6429a0fc7beb4096da, type: 3}
+  Description: Gives you a bolts
+  Picture: {fileID: 21300000, guid: e19e30eb895d63e48a7c4fac388b0c33, type: 3}
   Cost: 4
   Timer: 5
   CastAction: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000}
-        m_MethodName: SetWeaponToBeamCannon
+        m_MethodName: SetWeaponToBolt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79,3 +79,5 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   MonsterPrefab: {fileID: 0}
+  MessageDelay: 0
+  MessageColour: {r: 0, g: 0, b: 0, a: 0}

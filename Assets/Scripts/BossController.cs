@@ -22,7 +22,7 @@ public class BossController : MonoBehaviour
     public Text NameText;
     public Image BossImage;
     public Color DialogueColour;
-
+    public AudioSource HitSoundFX;
     private CardData currentCard;
     private float _timeout;
     private BossStats _bossStats;
@@ -150,6 +150,8 @@ public class BossController : MonoBehaviour
 
     public void TakeDamage(float ammount)
     {
+        HitSoundFX.Play();
+
         _bossStats.HP -= ammount;
         TextMessageSystem.Instance.Clear();
 

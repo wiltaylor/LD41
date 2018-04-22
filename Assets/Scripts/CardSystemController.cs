@@ -26,6 +26,8 @@ public class CardSystemController : MonoBehaviour
     public Text PreviewType;
     public Text PreviewText;
     public Image PreviewImage;
+    public AudioSource CastSFX;
+    public AudioSource DiscardSFX;
 
     public CardController CurrentTarget;
     public CardController CurrentSelection;
@@ -75,6 +77,8 @@ public class CardSystemController : MonoBehaviour
             CurrentSelection = null;
             CurrentTarget = null;
 
+            CastSFX.Play();
+
             _currentState = SelectionState.Ready;
             return;
         }
@@ -91,10 +95,12 @@ public class CardSystemController : MonoBehaviour
                 case ActionOnCast.Discard:
                     card.Discard();
                     PayCardCost(card.Data);
+                    CastSFX.Play();
                     break;
                 case ActionOnCast.MoveToBuffs:
                     CardStack.BuffInstance.AddCard(card.Data);
                     PayCardCost(card.Data);
+                    CastSFX.Play();
                     card.Discard();
                     break;
                 case ActionOnCast.Target:
@@ -137,5 +143,9 @@ public class CardSystemController : MonoBehaviour
         
     }
 
+    public void PlayDiscard()
+    {
+        DiscardSFX.Play();
+    }
 
 }

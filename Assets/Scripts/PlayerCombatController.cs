@@ -18,6 +18,7 @@ public class PlayerCombatController : MonoBehaviour
     public GameObject BeamEmiter;
     public GameObject ProjectileSpawn;
     public GameObject BoltPrefab;
+    public AudioSource HitSoundFX;
 
     public float BoltCooldown = 0.1f;
 
@@ -119,6 +120,7 @@ public class PlayerCombatController : MonoBehaviour
     public void TakeDamage(float ammount)
     {
         PlayerStats.Instance.HP -= ammount;
+        HitSoundFX.Play();
     }
 
 
