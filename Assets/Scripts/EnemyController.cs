@@ -23,16 +23,19 @@ public class EnemyController : MonoBehaviour
 
     private float _cooldown = 0f;
     private Rigidbody _rigidbody;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate ()
+    void Update ()
     {
         if (BossStats.Instance.HP <= 0)
+        {
+            gameObject.SetActive(false);
             return;
-
+        }
 
         transform.LookAt(PlayerStats.Instance.transform);
 
@@ -47,13 +50,14 @@ public class EnemyController : MonoBehaviour
 	            {
 	                var direction = (PlayerStats.Instance.transform.position - transform.position).normalized;
 
-                   // transform.position = transform.position + direction * Speed * Time.fixedDeltaTime;
-
-                    _rigidbody.MovePosition(Vector3.Lerp(transform.position, PlayerStats.Instance.transform.position, Speed * Time.fixedDeltaTime));
+                    //_rigidbody.MovePosition(Vector3.Lerp(transform.position, PlayerStats.Instance.transform.position, Speed * Time.fixedDeltaTime));
+	                _rigidbody.velocity = direction * Speed;
 	            }
                 break;
 	        case EnemyState.Attacking:
-	            if (Vector3.Distance(transform.position, PlayerStats.Instance.transform.position) > MinRange)
+	            _rigidbody.velocity = Vector3.zero;
+
+                if (Vector3.Distance(transform.position, PlayerStats.Instance.transform.position) > MinRange)
 	            {
 	                State = EnemyState.MovingToTarget;
                 }
@@ -63,18 +67,18 @@ public class EnemyController : MonoBehaviour
 	                {
 	                    _cooldown = BoltCoolDown;
 
-	                    var bolt = Instantiate(BoltPrefab);
+	                    var bolt = PoolSystem.Instance.GetProjectile(BoltPrefab);   //Instantiate(BoltPrefab);
 
 	                    bolt.transform.position = ProjectileSpawn.position;
 	                    bolt.transform.rotation = ProjectileSpawn.rotation;
-
-                        bolt.SetActive(true);
-
+                        
 	                    var ctrl = bolt.GetComponent<ProjectileController>();
 	                    ctrl.Damage = BoltDamage;
 	                    ctrl.TimeToLive = BoltLiveTime;
 	                    ctrl.Speed = BoltSpeed;
-	                }
+
+	                    bolt.SetActive(true);
+                    }
 	            }
                 break;
 	        default:

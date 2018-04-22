@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class BossController : MonoBehaviour
@@ -17,6 +18,9 @@ public class BossController : MonoBehaviour
 
     public DeckData Deck;
     public float DrawTimeOut;
+    public BossData CurrentBoss;
+    public Text NameText;
+    public Image BossImage;
 
     private CardData currentCard;
     private float _timeout;
@@ -43,8 +47,22 @@ public class BossController : MonoBehaviour
 	
 	void Update ()
 	{
-	    if (_bossStats.HP <= 0)
+	    if (CurrentBoss == null)
+	    {
+            NameText.gameObject.SetActive(false);
+            BossImage.gameObject.SetActive(false);
 	        return;
+        }
+
+	    NameText.gameObject.SetActive(true);
+	    BossImage.gameObject.SetActive(true);
+
+
+	    if (_bossStats.HP <= 0) //Do death stuff here
+	    {
+	        CurrentBoss = null;
+	        return;
+	    }
 
 
 	    _timeout -= Time.deltaTime;
@@ -101,5 +119,22 @@ public class BossController : MonoBehaviour
 
         return Deck.Items.Last().Card;
 
+    }
+
+    public void SetNewBoss(BossData boss)
+    {
+        CurrentBoss = boss;
+
+        _bossStats.MaxHP = boss.MaxHP;
+        _bossStats.MaxMana = boss.MaxMana;
+        _bossStats.HPChargeRate = boss.HPChargeRate;
+        _bossStats.ManaChargeRate = boss.ManaChargeRate;
+
+        _bossStats.HP = _bossStats.MaxHP;
+        _bossStats.Mana = _bossStats.MaxMana;
+
+        NameText.text = boss.Name;
+        BossImage.sprite = boss.Picture;
+        Deck = boss.Deck;
     }
 }

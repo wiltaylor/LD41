@@ -9,6 +9,13 @@ public class Destructable : MonoBehaviour
     public UnityEvent OnDeath;
     private bool doneDeath = false;
 
+    private float _startHp;
+
+    void Start()
+    {
+        _startHp = HP;
+    }
+
     public void DoDamage(float ammount)
     {
         HP -= ammount;
@@ -26,8 +33,9 @@ public class Destructable : MonoBehaviour
         }
     }
 
-    public void DestroyMe(float timeout)
+    void OnEnable()
     {
-        Destroy(gameObject, timeout);
+        doneDeath = false;
+        HP = _startHp;
     }
 }

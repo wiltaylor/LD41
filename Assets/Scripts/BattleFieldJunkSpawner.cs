@@ -38,7 +38,7 @@ public class BattleFieldJunkSpawner : MonoBehaviour
                     if (!Physics.CheckSphere(new Vector3(x, Y, z), item.CheckRadius, CheckMask))
                         break;
 
-                    if(infloopcheck > 10000)
+                    if(infloopcheck > 1000000)
                         throw new ApplicationException("Infinite loop protection triggered");
                 }
 

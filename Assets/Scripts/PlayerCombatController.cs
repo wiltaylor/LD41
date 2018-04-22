@@ -72,10 +72,10 @@ public class PlayerCombatController : MonoBehaviour
 
         if (CurrentWeapon == WeaponType.Bolt && _currentBoltCoolDown <= 0)
         {
-            var bolt = Instantiate(BoltPrefab);
+            var bolt = PoolSystem.Instance.GetProjectile(BoltPrefab); //Instantiate(BoltPrefab);
             bolt.transform.position = ProjectileSpawn.transform.position;
             bolt.transform.rotation = ProjectileSpawn.transform.rotation;
-            bolt.SetActive(true);
+            
 
             var controller = bolt.GetComponent<ProjectileController>();
             controller.Damage = Damage;
@@ -85,6 +85,8 @@ public class PlayerCombatController : MonoBehaviour
             _currentBoltCoolDown = BoltCooldown;
 
             Ammount -= 1;
+
+            bolt.SetActive(true);
         }
 
 
@@ -112,6 +114,11 @@ public class PlayerCombatController : MonoBehaviour
 
             Ammount -= Time.fixedDeltaTime;
         }
+    }
+
+    public void TakeDamage(float ammount)
+    {
+        PlayerStats.Instance.HP -= ammount;
     }
 
 

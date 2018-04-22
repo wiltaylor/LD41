@@ -45,5 +45,5 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MonsterPrefab: {fileID: 1565641817602664, guid: fb97afe19c4c565419975ad3eaa6fb8a,
+  MonsterPrefab: {fileID: 1484113939570672, guid: df6aaa2f1da6df247b0d741490467a11,
     type: 2}

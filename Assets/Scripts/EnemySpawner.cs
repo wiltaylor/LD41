@@ -30,10 +30,13 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < qty; i++)
         {
-            var newEnemy = Instantiate(prefab);
+            var newEnemy = PoolSystem.Instance.GetEnemy(prefab);
+
+            if (newEnemy == null) //hit unit cap drop out.
+                return;
+
             var range = Random.Range(MinDistance, MaxDistance);
             var angle = Random.Range(0f, 360f);
-            //var direction = Quaternion.AngleAxis(angle, Vector3.forward).eulerAngles;
             var rot = Quaternion.AngleAxis(angle, Vector3.up);
             var direction = rot * Vector3.forward;
 

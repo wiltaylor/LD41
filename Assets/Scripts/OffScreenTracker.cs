@@ -93,6 +93,12 @@ public class OffScreenTracker : MonoBehaviour
             if (tracker.Target == null || tracker.Target.gameObject == null)
                 continue;
 
+            if (!tracker.Target.gameObject.activeInHierarchy)
+            {
+                tracker.gameObject.SetActive(false);
+                continue;
+            }
+
             var screenPoint = _camera.WorldToScreenPoint(tracker.Target.position);
 
             if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.y > 0 && screenPoint.x < Screen.width &&

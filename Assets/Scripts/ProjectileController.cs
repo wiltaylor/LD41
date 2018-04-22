@@ -16,7 +16,7 @@ public class ProjectileController : MonoBehaviour
         TimeToLive -= Time.fixedDeltaTime;
 
         if(TimeToLive <= 0)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -26,6 +26,13 @@ public class ProjectileController : MonoBehaviour
         if(dest != null)
             dest.DoDamage(Damage);
 
-        Destroy(gameObject);
+        var player = other.transform.GetComponent<PlayerCombatController>();
+
+        if(player != null)
+            player.TakeDamage(Damage);
+
+        gameObject.SetActive(false);
     }
+
+
 }
