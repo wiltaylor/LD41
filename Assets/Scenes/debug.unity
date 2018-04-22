@@ -1519,48 +1519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6878859196e47ee409cd0263c8aaf24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1015458000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1015458002}
-  - component: {fileID: 1015458001}
-  m_Layer: 0
-  m_Name: Debug
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1015458001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1015458000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79120ab70454bc3499da82e15def60ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 1565641817602664, guid: fb97afe19c4c565419975ad3eaa6fb8a,
-    type: 2}
---- !u!4 &1015458002
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1015458000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71967095, y: 2.0712013, z: 27.72216}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053474352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,6 +1530,7 @@ GameObject:
   - component: {fileID: 1053474355}
   - component: {fileID: 1053474354}
   - component: {fileID: 1053474356}
+  - component: {fileID: 1053474357}
   m_Layer: 5
   m_Name: Boss Panel
   m_TagString: Untagged
@@ -1647,10 +1606,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   MaxHP: 10
-  ManaChargeRate: 0
+  ManaChargeRate: 1
   Mana: 5
-  MaxMana: 10
+  MaxMana: 5
   HPChargeRate: 0
+--- !u!114 &1053474357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053474352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b03298b1cba3d40a81008fe818145d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Deck: {fileID: 11400000, guid: ee4f239a36bab1e4db816a0d08572bf1, type: 2}
+  DrawTimeOut: 10
 --- !u!1 &1116056806
 GameObject:
   m_ObjectHideFlags: 0

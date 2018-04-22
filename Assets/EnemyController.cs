@@ -29,7 +29,11 @@ public class EnemyController : MonoBehaviour
     }
 
     void FixedUpdate ()
-	{
+    {
+        if (BossStats.Instance.HP <= 0)
+            return;
+
+
         transform.LookAt(PlayerStats.Instance.transform);
 
 	    switch (State)

@@ -90,6 +90,9 @@ public class OffScreenTracker : MonoBehaviour
 
         foreach (var tracker in _trackableObjects)
         {
+            if (tracker.Target == null || tracker.Target.gameObject == null)
+                continue;
+
             var screenPoint = _camera.WorldToScreenPoint(tracker.Target.position);
 
             if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.y > 0 && screenPoint.x < Screen.width &&

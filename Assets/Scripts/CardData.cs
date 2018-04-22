@@ -22,6 +22,7 @@ public class CardData : ScriptableObject
     public UnityEvent OnCast;
     public UnityEvent OnActivation;
     public UnityEvent OnExpire;
+    public GameObject MonsterPrefab;
 
     
     public void AddManaResource(int ammount)
@@ -60,6 +61,22 @@ public class CardData : ScriptableObject
     {
         CardSystemController.Instance.CurrentTarget.Discard();
     }
+
+    public void SpawnMonsters(int qty)
+    {
+        EnemySpawner.Instance.Spawn(MonsterPrefab, qty);
+    }
+
+    public void DamageBoss(float ammount)
+    {
+        BossStats.Instance.HP -= ammount;
+    }
+
+    public void DamagePlayer(float ammount)
+    {
+        PlayerStats.Instance.HP -= ammount;
+    }
+
 
 }
 

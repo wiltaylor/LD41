@@ -30,6 +30,9 @@ public class ResourceTracker : MonoBehaviour
 	        Type == ResourceType.PlayerMana ? Mathf.FloorToInt(PlayerStats.Instance.MaxMana) :
 	        Type == ResourceType.BossHP ? Mathf.FloorToInt(BossStats.Instance.MaxHP) : Mathf.FloorToInt(BossStats.Instance.MaxMana);
 
+	    if (qty < 0)
+	        qty = 0;
+
         if (_containers.Count != maxqty)
 	        UpdateContainers(maxqty);
 

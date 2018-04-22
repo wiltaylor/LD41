@@ -21,4 +21,8 @@ MonoBehaviour:
   - Card: {fileID: 11400000, guid: 955d560aca59fe342a532e0795c6afad, type: 2}
     Chance: 5
   - Card: {fileID: 11400000, guid: 68a6e96ff0fcefb4ea4a5c21e1a69121, type: 2}
-    Chance: 20
+    Chance: 7
+  - Card: {fileID: 11400000, guid: d331afa1bdd494249a4d6f2ffb1c18dd, type: 2}
+    Chance: 7
+  - Card: {fileID: 11400000, guid: 1ff640185285eb34dbca0da58ac5407d, type: 2}
+    Chance: 7

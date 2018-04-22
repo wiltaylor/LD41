@@ -9,35 +9,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cc87e626ffdd024ebae475f3112d2f3, type: 3}
-  m_Name: TestCard 4
+  m_Name: TestCard 7
   m_EditorClassIdentifier: 
-  Name: DestroyBuff
-  Type: Destruction
-  Description: Removes pesky Buffs
-  Picture: {fileID: 21300000, guid: b4f5c61af9aafb94599b0d676aaaf9da, type: 3}
-  Cost: 1
+  Name: Damage Boss
+  Type: Spell
+  Description: DamagesTheBoss
+  Picture: {fileID: 21300000, guid: e19e30eb895d63e48a7c4fac388b0c33, type: 3}
+  Cost: 5
   Timer: 5
-  CastAction: 2
-  TargetType: 1
+  CastAction: 0
+  TargetType: 2
   OnCast:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnActivation:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000}
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: DamageBoss
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnActivation:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnExpire:
